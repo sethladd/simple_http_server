@@ -4,7 +4,7 @@ import 'package:dhttpd/dhttpd.dart';
 import 'package:dhttpd/src/options.dart';
 
 Future<void> main(List<String> args) async {
-  Options options;
+  final Options options;
   try {
     options = parseOptions(args);
   } on FormatException catch (e) {
@@ -19,11 +19,11 @@ Future<void> main(List<String> args) async {
     return;
   }
 
-  await Dhttpd.start(
+  final dhttpd = await Dhttpd.start(
     path: options.path,
     port: options.port,
     address: options.host,
   );
 
-  print('Server started on port ${options.port}');
+  print('App available at ${dhttpd.urlBase}');
 }
