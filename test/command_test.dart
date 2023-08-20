@@ -40,7 +40,7 @@ Future<void> _outputCheck() async {
   final output = (await process.stdout.next).trim();
   await process.kill();
 
-  expect(output, equals('App available at http://localhost:8000/'));
+  expect(output, equals('Server started at http://localhost:8000/'));
 }
 
 Future<TestProcess> _runApp(List<String> args, {String? workingDirectory}) {

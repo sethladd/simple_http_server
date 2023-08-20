@@ -25,5 +25,5 @@ Future<void> main(List<String> args) async {
     address: options.host,
   );
 
-  print('App available at ${dhttpd.urlBase}');
+  print('Server started at ${dhttpd.urlBase}');
 }
