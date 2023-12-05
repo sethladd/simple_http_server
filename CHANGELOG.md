@@ -1,6 +1,7 @@
-## 4.0.2-wip
+## 4.1.0-wip
 
 - Update minimum Dart SDK to `3.0.0`.
+- Add clickable link to serve output.
 
 ## 4.0.1
 
